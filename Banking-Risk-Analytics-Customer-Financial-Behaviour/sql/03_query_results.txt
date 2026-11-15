@@ -1,0 +1,174 @@
+ total_rows | distinct_client_ids | undercount_if_distinct_counted 
+------------+---------------------+--------------------------------
+       3000 |                2940 |                             60
+(1 row)
+
+ client_id | rows_with_id |              names              
+-----------+--------------+---------------------------------
+ IND15088  |            2 | Betty Davis | Margaret Coleman
+ IND15955  |            2 | Susan Dunn | Victor Williams
+ IND17019  |            2 | Charles Richards | Keith Fuller
+ IND18812  |            2 | Emily Ruiz | Samuel Wright
+ IND19673  |            2 | Deborah James | Frank Harper
+ IND26283  |            2 | Joshua Hughes | Maria Phillips
+ IND27091  |            2 | Philip Moore | Rose Myers
+ IND28199  |            2 | Jesse Wood | Wayne Lane
+ IND31656  |            2 | Anna Murray | Phillip Hansen
+ IND31887  |            2 | Ernest Oliver | Kevin Weaver
+(10 rows)
+
+ zero_bank_loans | zero_bank_deposits | zero_business_lending 
+-----------------+--------------------+-----------------------
+              27 |                 34 |                    14
+(1 row)
+
+ total_clients | total_loans_m | total_deposits_m | loan_to_deposit_ratio | funding_gap_m | est_fee_revenue_m 
+---------------+---------------+------------------+-----------------------+---------------+-------------------
+          3000 |        4384.0 |           3766.3 |                 1.164 |         617.6 |             158.2
+(1 row)
+
+       product       | amount_m | pct_of_loans 
+---------------------+----------+--------------
+ Business Lending    |   2600.3 |         59.3
+ Bank Loans          |   1774.2 |         40.5
+ Credit Card Balance |      9.5 |          0.2
+(3 rows)
+
+ banking_relationship | clients | loans_m | deposits_m | pct_of_loan_book | loan_to_deposit 
+----------------------+---------+---------+------------+------------------+-----------------
+ Private Bank         |    1352 |  1989.8 |     1725.7 |             45.4 |            1.15
+ Retail               |     660 |   950.4 |      801.9 |             21.7 |            1.19
+ Commercial           |     493 |   731.2 |      623.4 |             16.7 |            1.17
+ Institutional        |     495 |   712.6 |      615.3 |             16.3 |            1.16
+(4 rows)
+
+ nationality | clients | loans_m | deposits_m | avg_income 
+-------------+---------+---------+------------+------------
+ European    |    1309 |  1937.7 |     1638.7 |     174836
+ Asian       |     754 |  1084.8 |      961.3 |     170776
+ American    |     507 |   729.8 |      630.3 |     163767
+ Australian  |     254 |   382.1 |      313.7 |     165291
+ African     |     176 |   249.6 |      222.3 |     177704
+(5 rows)
+
+ income_band | clients | median_loan_to_income | pct_of_loan_book 
+-------------+---------+-----------------------+------------------
+ Low         |    1027 |                  5.93 |             25.2
+ Mid         |    1517 |                  2.97 |             53.2
+ High        |     456 |                  1.98 |             21.6
+(3 rows)
+
+ age_group | gender | clients | avg_deposit | avg_loan 
+-----------+--------+---------+-------------+----------
+ 18-30     | Female |     327 |     1240685 |  1360424
+ 18-30     | Male   |     283 |     1199434 |  1467516
+ 31-45     | Female |     319 |     1208649 |  1518499
+ 31-45     | Male   |     321 |     1345024 |  1489391
+ 46-60     | Female |     318 |     1241176 |  1474168
+ 46-60     | Male   |     348 |     1284871 |  1454375
+ 60+       | Female |     548 |     1298904 |  1451281
+ 60+       | Male   |     536 |     1213154 |  1475924
+(8 rows)
+
+ join_year | new_clients | yoy_change | cumulative_clients 
+-----------+-------------+------------+--------------------
+      1995 |          97 |            |                 97
+      1996 |         109 |         12 |                206
+      1999 |         101 |         -8 |                307
+      2000 |          99 |         -2 |                406
+      2001 |         106 |          7 |                512
+      2002 |         110 |          4 |                622
+      2003 |          98 |        -12 |                720
+      2004 |         106 |          8 |                826
+      2005 |         119 |         13 |                945
+      2006 |         112 |         -7 |               1057
+      2007 |         110 |         -2 |               1167
+      2008 |         117 |          7 |               1284
+      2009 |         105 |        -12 |               1389
+      2010 |          99 |         -6 |               1488
+      2011 |          90 |         -9 |               1578
+      2012 |         109 |         19 |               1687
+      2013 |         126 |         17 |               1813
+      2014 |         119 |         -7 |               1932
+      2015 |         116 |         -3 |               2048
+      2016 |         107 |         -9 |               2155
+      2017 |          97 |        -10 |               2252
+      2018 |         119 |         22 |               2371
+      2019 |         187 |         68 |               2558
+      2020 |         248 |         61 |               2806
+      2021 |         194 |        -54 |               3000
+(25 rows)
+
+ relationship_segment | clients | loans_m | deposits_m | avg_risk_weight 
+----------------------+---------+---------+------------+-----------------
+ Full relationship    |    1009 |  2279.2 |     2249.4 |            2.77
+ Borrower-heavy       |     491 |   973.4 |      253.8 |            2.59
+ Low engagement       |    1009 |   709.5 |      459.7 |            1.62
+ Saver                |     491 |   422.0 |      803.5 |            2.13
+(4 rows)
+
+ client_key | client_id |      name       | banking_relationship | total_loan | risk_weighting | pct_of_book 
+------------+-----------+-----------------+----------------------+------------+----------------+-------------
+       2813 | IND23112  | Arthur Mitchell | Institutional        |    6078679 |              5 |       0.139
+       2098 | IND22626  | Terry Chavez    | Private Bank         |    5777807 |              4 |       0.132
+       2803 | IND31640  | Larry Cooper    | Commercial           |    5693071 |              5 |       0.130
+       1133 | IND70565  | Craig Hansen    | Private Bank         |    5617543 |              5 |       0.128
+       2364 | IND92500  | Daniel Gomez    | Private Bank         |    5094901 |              4 |       0.116
+       2648 | IND31953  | Lawrence Wilson | Retail               |    5082746 |              3 |       0.116
+       2503 | IND76909  | Frank Fox       | Retail               |    4971165 |              4 |       0.113
+       1596 | IND19422  | Sean Harrison   | Private Bank         |    4965474 |              4 |       0.113
+       1505 | IND89040  | Earl Hart       | Private Bank         |    4930519 |              5 |       0.112
+         98 | IND28531  | Ronald Burns    | Retail               |    4828348 |              4 |       0.110
+(10 rows)
+
+ risk_weighting | clients | avg_income | avg_total_loan | pct_loan_over_6x_income 
+----------------+---------+------------+----------------+-------------------------
+              1 |     836 |      77540 |         821951 |                    32.5
+              2 |    1222 |     159257 |        1442228 |                    26.4
+              3 |     460 |     246058 |        1933168 |                    21.5
+              4 |     322 |     284742 |        2103511 |                    18.6
+              5 |     160 |     310041 |        2298910 |                    16.3
+(5 rows)
+
+ underrated_clients | pct_of_clients | their_bank_loans_m | pct_of_bank_loans 
+--------------------+----------------+--------------------+-------------------
+                595 |           19.8 |              448.4 |              25.3
+(1 row)
+
+ investment_advisor | clients | underrated_clients | review_priority 
+--------------------+---------+--------------------+-----------------
+ Joe Carroll        |     177 |                 44 |               1
+ Jeremy Porter      |     177 |                 39 |               2
+ Carl Anderson      |     176 |                 37 |               3
+ Eric Shaw          |     177 |                 37 |               3
+ Steve Sanchez      |     176 |                 36 |               5
+ Ernest Knight      |     177 |                 35 |               6
+ Victor Gutierrez   |     176 |                 34 |               7
+ Lawrence Sanchez   |     176 |                 33 |               8
+ Daniel Carroll     |     176 |                 32 |               9
+ Nicholas Ward      |     176 |                 32 |               9
+(10 rows)
+
+ banking_relationship | client_id |       name       | total_loan 
+----------------------+-----------+------------------+------------
+ Institutional        | IND23112  | Arthur Mitchell  |    6078679
+ Commercial           | IND31640  | Larry Cooper     |    5693071
+ Private Bank         | IND70565  | Craig Hansen     |    5617543
+ Retail               | IND68824  | Howard Patterson |    4732279
+(4 rows)
+
+ loyalty_classification | clients | median_deposit | median_income | avg_tenure_years 
+------------------------+---------+----------------+---------------+------------------
+ Jade                   |    1331 |         982945 |        144947 |             11.2
+ Silver                 |     767 |         950745 |        141690 |             11.8
+ Gold                   |     585 |         889274 |        139310 |             11.2
+ Platinum               |     317 |         853154 |        136956 |             11.5
+(4 rows)
+
+ fee_structure | clients | fee_revenue_m | pct_of_fee_revenue 
+---------------+---------+---------------+--------------------
+ High          |    1476 |         107.1 |               67.7
+ Mid           |     962 |          43.0 |               27.2
+ Low           |     562 |           8.1 |                5.1
+(3 rows)
+
