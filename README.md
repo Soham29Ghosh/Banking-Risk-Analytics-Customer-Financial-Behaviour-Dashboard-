@@ -4,7 +4,7 @@
 
 An end-to-end analysis of **3,000 bank clients**, looking at loan exposure, deposits, customer segments and credit risk. It finds a **$618M funding gap** and **595 clients (19.8%) whose risk rating hides high leverage**, and turns these into data-backed recommendations.
 
-🔗 **Live dashboard:** *[add your Tableau Public link here]*
+🔗 **Live Tableau dashboard:** [Banking Risk Analytics Dashboard](https://public.tableau.com/views/BankingRiskAnalyticsDashboard/BankingRiskDashboard)
 📊 **Full write-up:** [`docs/insights_report.md`](Banking-Risk-Analytics-Customer-Financial-Behaviour/docs/insights_report.md)
 
 ![Relationship segments](Banking-Risk-Analytics-Customer-Financial-Behaviour/images/06_relationship_segments.png)
@@ -41,7 +41,7 @@ Raw CSVs → Python (cleaning, data quality, feature engineering) → banking_cl
 2. **Feature engineering:** total loan and deposit, net position, loan-to-deposit, **loan-to-income**, income/age/tenure bands, estimated fee revenue, product-mix segments, and an **under-rated risk flag**.
 3. **SQL analysis** (`sql/`): normalised schema with constraints and foreign keys, staging → clean load, an analysis view, and 18 queries using CTEs, window functions (`RANK`, `ROW_NUMBER`, `LAG`, running totals), `PERCENTILE_CONT` and conditional aggregation.
 4. **EDA, segmentation and statistics** (`notebooks/02`): segment profiling, Spearman correlation, Kruskal–Wallis tests.
-5. **Tableau dashboard:** 3 pages (Executive Overview, Loan & Risk, Segments & Loyalty) with KPI cards, filters, a parameter and dashboard actions. See [`docs/tableau_build_guide.md`](Banking-Risk-Analytics-Customer-Financial-Behaviour/docs/tableau_build_guide.md).
+5. **Tableau dashboard:** one interactive dashboard with KPI cards (clients, loans, deposits, loan-to-deposit ratio), loans by relationship and nationality, and the risk-rating vs leverage analysis. See [`docs/tableau_build_guide.md`](Banking-Risk-Analytics-Customer-Financial-Behaviour/docs/tableau_build_guide.md).
 
 ## Key insights
 
